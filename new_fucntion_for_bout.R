@@ -90,8 +90,6 @@ cluster_plot<-function(subject,day,lag,threshold,influence){
   }
   cluster_result<-tsclust(series=ts_list,k=3)
   cluster<-cluster_result@cluster
-  cluster_result<-tsclust(series=ts_list,k=3)
-  cluster<-cluster_result@cluster
   plot(cluster_result)
   plot(df1$DATE,y,type="l",ylab="",xlab="")
   for(i in c(which(cluster==1))){
